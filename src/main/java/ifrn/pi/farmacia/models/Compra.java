@@ -23,6 +23,8 @@ public class Compra {
 	private List<Remedio> remedios;
 	
 	private String texto;
+	
+	private Double valor;
 
 	public Long getId() {
 		return id;
@@ -46,6 +48,21 @@ public class Compra {
 
 	public void setRemedios(List<Remedio> remedios) {
 		this.remedios = remedios;
+	}
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+	
+public void calcularValor(List<Remedio> remedios) {
+		
+		for(Remedio r : remedios) {
+			this.valor = valor + r.getPreco();
+		}
 	}
 	
 	

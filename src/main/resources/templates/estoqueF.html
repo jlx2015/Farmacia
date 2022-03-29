@@ -17,13 +17,12 @@
 		<div class="nav-wrapper black">
 			<a href="/" class="brand-logo" id="nomeL">Farmácia</a>
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
-				<li><a href="/farmacia/remedios"> Remedios</a></li>
 				<li><a href="/farmacia/logar"> Sair</a></li>
 			</ul>
 		</div>
 	</nav>
 	<div class="container">
-		<form action="/farmacia/estoque/salvar" method="post" th:object="${remedio}">
+		<form action="/farmacia/estoqueF/salvar" method="post" th:object="${remedio}">
 			<div>
 				<input type="hidden" th:field="*{id}" readonly="readonly">
 			</div>
@@ -71,7 +70,7 @@
 							Quantidade: <span th:text="${i.quantidade}"></span>
 						</p>
 						<a class="waves-effect waves-light btn"
-							th:href=@{/farmacia/estoque/{id}/editar(id=${i.id})}>Mudar
+							th:href=@{/farmacia/estoqueF/{id}/editar(id=${i.id})}>Mudar
 							Quantidade</a>
 						</p>
 					</div>

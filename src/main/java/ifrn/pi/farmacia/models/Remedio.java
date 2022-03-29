@@ -16,7 +16,7 @@ public class Remedio {
 	
 	private String descricao;
 	
-	private String preco;
+	private Long preco;
 	
 	private String quantidade;
 	
@@ -48,11 +48,11 @@ public class Remedio {
 		this.descricao = descricao;
 	}
 
-	public String getPreco() {
+	public Long getPreco() {
 		return preco;
 	}
 
-	public void setPreco(String preco) {
+	public void setPreco(Long preco) {
 		this.preco = preco;
 	}
 
